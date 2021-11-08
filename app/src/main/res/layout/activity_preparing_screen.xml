@@ -26,7 +26,7 @@
         android:layout_width="294dp"
         android:layout_height="51dp"
         android:layout_marginBottom="219dp"
-        android:background="#FFEB3B"
+        android:background="#F0F3EE"
         android:text="We are creating your account. Please wait..."
         android:textAlignment="center"
         android:textColor="#673AB7"

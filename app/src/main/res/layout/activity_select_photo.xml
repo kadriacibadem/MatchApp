@@ -22,7 +22,7 @@
         android:id="@+id/textView"
         android:layout_width="314dp"
         android:layout_height="29dp"
-        android:background="#FFEB3B"
+        android:background="#F0F3EE"
         android:text="Please Choose Profile Photo"
         android:textAlignment="center"
         android:textColor="#673AB7"
