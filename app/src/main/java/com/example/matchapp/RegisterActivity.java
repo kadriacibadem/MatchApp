@@ -18,6 +18,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.matchapp.databinding.ActivityRegisterBinding;
@@ -37,20 +38,17 @@ public class RegisterActivity extends AppCompatActivity {
     ActivityResultLauncher<Intent> activityResultLauncher;
     ActivityResultLauncher<String> permissionLauncher;
     Uri imageData;
-    private ActivityRegisterBinding binding;
     private FirebaseAuth auth;
     private FirebaseStorage firebaseStorage;
-
+    ImageView profilePhoto;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityRegisterBinding.inflate(getLayoutInflater());
-        View view = binding.getRoot();
-        setContentView(view);
+        setContentView(R.layout.activity_register);
         registerLauncher();
-
+        profilePhoto=findViewById(R.id.imageView4);
         firebaseStorage=FirebaseStorage.getInstance();
 
 
@@ -87,7 +85,7 @@ public class RegisterActivity extends AppCompatActivity {
                     Intent intentFromResult=result.getData();
                     if(intentFromResult != null){
                         imageData=intentFromResult.getData();
-                        binding.imageView4.setImageURI(imageData);
+                        profilePhoto.setImageURI(imageData);
                     }
                 }
             }
