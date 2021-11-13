@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "1014883328274",
-    "project_id": "matchandenjoy-fe872",
-    "storage_bucket": "matchandenjoy-fe872.appspot.com"
+    "project_number": "487470497885",
+    "project_id": "database-f8b0f",
+    "storage_bucket": "database-f8b0f.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1014883328274:android:37e379eb93048e9a3513cb",
+        "mobilesdk_app_id": "1:487470497885:android:e7405cdd38031099f48db4",
         "android_client_info": {
           "package_name": "com.example.matchapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1014883328274-qc0v1bjlshi8u9cun917nbcrfkmb03n0.apps.googleusercontent.com",
+          "client_id": "487470497885-1j7vjj8qlr77u7ivjk3vp1ddl2clrc1a.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBQj41Jqm8L7Zhh9dzACQOjfsXrunxmVi8"
+          "current_key": "AIzaSyAsSiH4Wt0Hc8y5YwW9vk0TFDkGe4QAU2s"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1014883328274-qc0v1bjlshi8u9cun917nbcrfkmb03n0.apps.googleusercontent.com",
+              "client_id": "487470497885-1j7vjj8qlr77u7ivjk3vp1ddl2clrc1a.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
