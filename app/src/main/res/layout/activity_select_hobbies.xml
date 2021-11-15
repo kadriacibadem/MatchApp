@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".SelectHobbies">
 
-
     <Button
         android:id="@+id/registerButon"
         android:layout_width="159dp"

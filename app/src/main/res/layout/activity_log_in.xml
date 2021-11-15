@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LogInActivity">
-
     <EditText
         android:id="@+id/EmailText"
         android:layout_width="279dp"
@@ -43,6 +42,7 @@
         android:layout_width="244dp"
         android:layout_height="50dp"
         android:layout_marginTop="44dp"
+        android:onClick="logIn"
         android:text="Log In"
         android:textColor="#FFEB3B"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,3 +62,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/forgetPasswordButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+
