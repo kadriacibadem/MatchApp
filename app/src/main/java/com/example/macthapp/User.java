@@ -1,15 +1,20 @@
 package com.example.macthapp;
 
 public class User {
-    String email,name,age,userId;
+    String email,name,age,userId,userProfile;
 
 
 
-    public User(String email, String name, String age, String userId) {
+    public User(){
+
+    }
+
+    public User(String email, String name, String age, String userId, String userProfile) {
         this.email = email;
         this.name = name;
         this.age = age;
         this.userId = userId;
+        this.userProfile=userProfile;
 
     }
 
@@ -43,6 +48,14 @@ public class User {
 
     public void setUserId(String userId) {
         this.userId = userId;
+    }
+
+    public String getUserProfile() {
+        return userProfile;
+    }
+
+    public void setUserProfile(String userProfile) {
+        this.userProfile = userProfile;
     }
 
 
