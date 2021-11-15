@@ -14,6 +14,7 @@ import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -43,6 +44,7 @@ public class RegisterActivity extends AppCompatActivity {
     EditText emailText, nameText, passwordText, ageText;
     Button nextButton;
     Uri imageUri;
+    ProgressBar pBar;
     private static final int PICK_IMAGE=1;
 
     StorageReference mStorageRef,newRef,sRef;
@@ -63,11 +65,14 @@ public class RegisterActivity extends AppCompatActivity {
         nextButton = findViewById(R.id.nextButton);
         mAuth=FirebaseAuth.getInstance();
         mFirestore=FirebaseFirestore.getInstance();
-
+        pBar=findViewById(R.id.pbar);
+        pBar.setVisibility(View.INVISIBLE);
         mStorageRef= FirebaseStorage.getInstance().getReference();
 
     }
     public void next(View view){
+        nextButton.setEnabled(false);
+        pBar.setVisibility(View.VISIBLE);
         String email = emailText.getText().toString();
         String password=passwordText.getText().toString();
         String name=nameText.getText().toString();
