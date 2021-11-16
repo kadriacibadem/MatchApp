@@ -38,7 +38,7 @@
         app:layout_constraintStart_toStartOf="@+id/EmailText" />
 
     <Button
-        android:id="@+id/forgetPasswordButton"
+        android:id="@+id/logInButton"
         android:layout_width="244dp"
         android:layout_height="50dp"
         android:layout_marginTop="44dp"
@@ -60,6 +60,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/forgetPasswordButton" />
+        app:layout_constraintTop_toBottomOf="@+id/logInButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 

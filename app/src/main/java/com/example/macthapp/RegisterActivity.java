@@ -112,33 +112,23 @@ public class RegisterActivity extends AppCompatActivity {
                                                                             Toast.makeText(RegisterActivity.this,"Select Hobbies",Toast.LENGTH_SHORT).show();
                                                                             finish();
                                                                             startActivity(new Intent(RegisterActivity.this,SelectHobbies.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
-
                                                                         }
                                                                     }
                                                                 });
                                                             }
                                                         });
-
                                                     }
                                                 });
-
-
-
                                     }
                                 }
                             });
 
                         }
-
-
-
                     }else{
                         Toast.makeText(RegisterActivity.this,task.getException().getMessage(),Toast.LENGTH_SHORT).show();
-
                     }
                 }
             });
-
         }else{
             Toast.makeText(RegisterActivity.this,"Please Enter All Field",Toast.LENGTH_SHORT).show();
         }
