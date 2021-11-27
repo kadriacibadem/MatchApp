@@ -1,7 +1,10 @@
 package com.example.macthapp;
 
+import java.util.ArrayList;
+
+
 public class User {
-    String email,name,age,userId,userProfile;
+    String email,name,age,userId;
 
 
 
@@ -9,12 +12,14 @@ public class User {
 
     }
 
-    public User(String email, String name, String age, String userId, String userProfile) {
+
+
+
+    public User(String email, String name, String age, String userId) {
         this.email = email;
         this.name = name;
         this.age = age;
         this.userId = userId;
-        this.userProfile=userProfile;
 
     }
 
@@ -50,13 +55,6 @@ public class User {
         this.userId = userId;
     }
 
-    public String getUserProfile() {
-        return userProfile;
-    }
-
-    public void setUserProfile(String userProfile) {
-        this.userProfile = userProfile;
-    }
 
 
 }

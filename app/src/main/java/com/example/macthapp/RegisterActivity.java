@@ -85,7 +85,7 @@ public class RegisterActivity extends AppCompatActivity {
                     if(task.isSuccessful()){
                         mUser=mAuth.getCurrentUser();
                         if(mUser != null){
-                            user=new User(email,name,age,mUser.getUid(),dowloadLink);
+                            user=new User(email,name,age,mUser.getUid());
                             mFirestore.collection("Users").document(mUser.getUid()).set(user).addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
