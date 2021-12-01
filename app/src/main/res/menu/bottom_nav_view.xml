@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+         android:id="@+id/bottom_nav_ic_people"
+        android:icon="@drawable/ic_people"
+        android:title="Profile"/>
+
+    <item
+        android:id="@+id/bottom_nav_ic_message"
+        android:icon="@drawable/ic_messages"
+        android:title="Messages"/>
+
+
+    <item
+        android:id="@+id/bottom_nav_ic_macth"
+        android:icon="@drawable/ic_match"
+        android:title="Match"/>
+</menu>

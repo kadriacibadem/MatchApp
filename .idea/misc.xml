@@ -3,13 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/trka8/AndroidStudioProjects/macthApp/app/src/main/res/drawable-anydpi/ic_people.xml" value="0.2203125" />
         <entry key="..\:/Users/trka8/AndroidStudioProjects/macthApp/app/src/main/res/layout/activity_log_in.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/trka8/AndroidStudioProjects/macthApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/trka8/AndroidStudioProjects/macthApp/app/src/main/res/layout/activity_main_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/trka8/AndroidStudioProjects/macthApp/app/src/main/res/layout/activity_main_menu.xml" value="0.22" />
         <entry key="..\:/Users/trka8/AndroidStudioProjects/macthApp/app/src/main/res/layout/activity_preparing_screen.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/trka8/AndroidStudioProjects/macthApp/app/src/main/res/layout/activity_register.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/trka8/AndroidStudioProjects/macthApp/app/src/main/res/layout/activity_second_screen.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/trka8/AndroidStudioProjects/macthApp/app/src/main/res/layout/activity_select_hobbies.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/trka8/AndroidStudioProjects/macthApp/app/src/main/res/menu/bottom_nav_view.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/trka8/AndroidStudioProjects/macthApp/app/src/main/res/menu/buttom_nav_view.xml" value="0.18" />
       </map>
     </option>
   </component>
