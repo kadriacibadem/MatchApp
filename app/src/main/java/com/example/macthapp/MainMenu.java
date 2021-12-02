@@ -3,8 +3,11 @@ package com.example.macthapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -19,7 +22,6 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -28,6 +30,7 @@ public class MainMenu extends AppCompatActivity {
     ImageView imageView;
     TextView name,age,hobbies,mail;
     EditText nameEdit,ageEdit,emailEdit,hobbiesEdit;
+    Button button1,button2;
 
 
 
@@ -35,7 +38,6 @@ public class MainMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
-        mBottomNavi=findViewById(R.id.bottomNavi);
         imageView=findViewById(R.id.imageView4);
         name=findViewById(R.id.nameText);
         age=findViewById(R.id.ageText);
@@ -45,6 +47,9 @@ public class MainMenu extends AppCompatActivity {
         ageEdit=findViewById(R.id.ageEdit);
         emailEdit=findViewById(R.id.emailEdit);
         hobbiesEdit=findViewById(R.id.hobbiesEdit);
+        button1=findViewById(R.id.button1);
+        button2=findViewById(R.id.button2);
+
 
 
         FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
@@ -86,6 +91,17 @@ public class MainMenu extends AppCompatActivity {
                 }
             }
         });
+
+    }
+    public void match(View view){
+        Intent intent=new Intent(MainMenu.this,MatchPreparing.class);
+        startActivity(intent);
+
+    }
+
+    public void messages(View view){
+        Intent intent=new Intent(MainMenu.this,Match.class);
+        startActivity(intent);
 
     }
 }
