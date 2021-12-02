@@ -26,7 +26,7 @@ import java.util.List;
 import java.util.Map;
 
 public class MainMenu extends AppCompatActivity {
-    private BottomNavigationView mBottomNavi;
+   // private BottomNavigationView mBottomNavi;
     ImageView imageView;
     TextView name,age,hobbies,mail;
     EditText nameEdit,ageEdit,emailEdit,hobbiesEdit;
