@@ -18,7 +18,6 @@ public class MatchPreparing extends AppCompatActivity {
 
                 Intent i=new Intent(MatchPreparing.this,Match.class);
                 startActivity(i);
-                finish();
             }
         },4500);
     }

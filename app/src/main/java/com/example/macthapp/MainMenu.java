@@ -22,22 +22,24 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 public class MainMenu extends AppCompatActivity {
-   // private BottomNavigationView mBottomNavi;
     ImageView imageView;
     TextView name,age,hobbies,mail;
     EditText nameEdit,ageEdit,emailEdit,hobbiesEdit;
     Button button1,button2;
-
+    ArrayList<String> userIdArray;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
+        userIdArray=new ArrayList<String>();
         imageView=findViewById(R.id.imageView4);
         name=findViewById(R.id.nameText);
         age=findViewById(R.id.ageText);
@@ -51,13 +53,16 @@ public class MainMenu extends AppCompatActivity {
         button2=findViewById(R.id.button2);
 
 
-
         FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
         String currentid=user.getUid();
+     //   userIdArray.add(currentid);
         DocumentReference reference;
         FirebaseFirestore firestore=FirebaseFirestore.getInstance();
 
         reference=firestore.collection("Users").document(currentid);
+
+
+
         reference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
@@ -78,21 +83,19 @@ public class MainMenu extends AppCompatActivity {
 
                         }
                     }
-
-
-
                     Picasso.get().load(url).into(imageView);
                     name.setText(nameResult);
                     mail.setText(eMail);
                     age.setText(ageResult);
-
-
-
                 }
             }
         });
-
     }
+ /*   public String getRandomUserId() {
+        Random random=new Random();
+        int index=random.nextInt(userIdArray.size()+1);
+        return userIdArray.get(index);
+    }*/
     public void match(View view){
         Intent intent=new Intent(MainMenu.this,MatchPreparing.class);
         startActivity(intent);
@@ -100,8 +103,7 @@ public class MainMenu extends AppCompatActivity {
     }
 
     public void messages(View view){
-        Intent intent=new Intent(MainMenu.this,Match.class);
+        Intent intent=new Intent(MainMenu.this,Messages.class);
         startActivity(intent);
-
     }
 }
