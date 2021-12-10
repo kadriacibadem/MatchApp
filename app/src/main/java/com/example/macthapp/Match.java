@@ -54,12 +54,7 @@ public class Match extends AppCompatActivity {
 
         FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
 
-       // MainMenu mainMenu=new MainMenu();
-      //  String randomUserId=mainMenu.getRandomUserId();
-       // String currentid=user.getUid();
-    /*    String[] userIdArrays={"0CqJFgLb9zOlXCSHekLTTj203wD3","0XmL1euEv0N4CiPVsC7LeVz4OEC2","3LWh3xMNHXbIrYLjWnlqSZQrRH73","4K8GHCNJbmQDnY4x6RnHRTAFcUT2","4zbe9tAcmQboBO23NXRCnCQjlcX2",
-                "67yngCU5NjfngETRYfQ6vK7Kefr1","7qKF3qijQpSiyVsdJqKKfZ8i1j52","8oUauvi3oDZFYmZBmb2oh9awaly2","APTQPlmAuRN9xQ9Pwy8IR8AiHct2",
-                "GJbY9hJpPSgvuZNqe8599U9YAmy2"};*/
+    
 
         array.add("0CqJFgLb9zOlXCSHekLTTj203wD3");
         array.add("0XmL1euEv0N4CiPVsC7LeVz4OEC2");
