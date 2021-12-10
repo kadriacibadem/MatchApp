@@ -34,7 +34,12 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.359" />
+        app:layout_constraintVertical_bias="0.359"
+        android:enabled="false"
+        android:focusable="false"
+        android:clickable="false"
+        android:longClickable="false"
+        />
 
     <EditText
         android:id="@+id/mailText"
@@ -50,7 +55,11 @@
         app:layout_constraintHorizontal_bias="0.588"
         app:layout_constraintStart_toEndOf="@+id/emailEdit"
         app:layout_constraintTop_toBottomOf="@+id/nameText"
-        app:layout_constraintVertical_bias="0.067" />
+        app:layout_constraintVertical_bias="0.067"
+        android:enabled="false"
+        android:focusable="false"
+        android:clickable="false"
+        android:longClickable="false"/>
 
     <EditText
         android:id="@+id/ageText"
@@ -67,7 +76,11 @@
         app:layout_constraintHorizontal_bias="0.081"
         app:layout_constraintStart_toEndOf="@+id/ageEdit"
         app:layout_constraintTop_toBottomOf="@+id/mailText"
-        app:layout_constraintVertical_bias="0.062" />
+        app:layout_constraintVertical_bias="0.062"
+        android:enabled="false"
+        android:focusable="false"
+        android:clickable="false"
+        android:longClickable="false"/>
 
     <EditText
         android:id="@+id/hobbies"
@@ -83,21 +96,31 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.825" />
+        app:layout_constraintVertical_bias="0.825"
+        android:enabled="false"
+        android:focusable="false"
+        android:clickable="false"
+        android:longClickable="false"/>
 
     <EditText
         android:id="@+id/nameEdit"
         android:layout_width="86dp"
         android:layout_height="43dp"
+        android:background="@null"
+        android:clickable="false"
         android:ems="10"
+        android:enabled="false"
+        android:focusable="false"
         android:inputType="textPersonName"
+        android:longClickable="false"
         android:text="Name"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.362" />
+        app:layout_constraintVertical_bias="0.363" />
 
     <EditText
         android:id="@+id/emailEdit"
@@ -106,12 +129,18 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="E-Mail"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.476" />
+        app:layout_constraintVertical_bias="0.476"
+        android:enabled="false"
+        android:focusable="false"
+        android:clickable="false"
+        android:longClickable="false"
+        android:background="@null"/>
 
     <EditText
         android:id="@+id/ageEdit"
@@ -120,12 +149,18 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Age"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.598" />
+        app:layout_constraintVertical_bias="0.598"
+        android:enabled="false"
+        android:focusable="false"
+        android:clickable="false"
+        android:longClickable="false"
+        android:background="@null"/>
 
     <EditText
         android:id="@+id/hobbiesEdit"
@@ -134,12 +169,18 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Hobbies"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.725" />
+        app:layout_constraintVertical_bias="0.725"
+        android:enabled="false"
+        android:focusable="false"
+        android:clickable="false"
+        android:longClickable="false"
+        android:background="@null"/>
 
     <Button
         android:id="@+id/button1"
@@ -147,7 +188,8 @@
         android:layout_height="49dp"
         android:onClick="messages"
         android:text="Messages"
-        android:textColor="#FFEB3B"
+        android:textColor="#342E37"
+        android:background="@drawable/rectangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.193"
@@ -161,7 +203,8 @@
         android:layout_height="50dp"
         android:onClick="match"
         android:text="Match"
-        android:textColor="#FFEB3B"
+        android:textColor="#342E37"
+        android:background="@drawable/rectangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.826"

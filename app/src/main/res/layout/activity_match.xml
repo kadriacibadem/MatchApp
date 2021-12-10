@@ -88,10 +88,10 @@
         android:textColorHint="#9C27B0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintHorizontal_bias="0.121"
         app:layout_constraintStart_toEndOf="@+id/ageEdit"
         app:layout_constraintTop_toBottomOf="@+id/mailText"
-        app:layout_constraintVertical_bias="0.062" />
+        app:layout_constraintVertical_bias="0.038" />
 
     <EditText
         android:id="@+id/hobbies"
