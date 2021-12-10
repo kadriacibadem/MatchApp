@@ -32,14 +32,13 @@ public class MainMenu extends AppCompatActivity {
     TextView name,age,hobbies,mail;
     EditText nameEdit,ageEdit,emailEdit,hobbiesEdit;
     Button button1,button2;
-    ArrayList<String> userIdArray;
+    ArrayList<String> userIdArray=new ArrayList<String>();
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
-        userIdArray=new ArrayList<String>();
         imageView=findViewById(R.id.imageView4);
         name=findViewById(R.id.nameText);
         age=findViewById(R.id.ageText);
@@ -55,13 +54,14 @@ public class MainMenu extends AppCompatActivity {
 
         FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
         String currentid=user.getUid();
-     //   userIdArray.add(currentid);
+        userIdArray.add(currentid);
+        for (String i:userIdArray){
+            System.out.println(i);
+        }
         DocumentReference reference;
         FirebaseFirestore firestore=FirebaseFirestore.getInstance();
 
         reference=firestore.collection("Users").document(currentid);
-
-
 
         reference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
@@ -91,10 +91,13 @@ public class MainMenu extends AppCompatActivity {
             }
         });
     }
- /*   public String getRandomUserId() {
+  /* public String getRandomUserId() {
         Random random=new Random();
-        int index=random.nextInt(userIdArray.size()+1);
-        return userIdArray.get(index);
+        int index = random.nextInt(userIdArray.size()+1);
+        String randomUserId=userIdArray.get(index);
+        return randomUserId;
+
+
     }*/
     public void match(View view){
         Intent intent=new Intent(MainMenu.this,MatchPreparing.class);

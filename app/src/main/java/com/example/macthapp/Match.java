@@ -3,8 +3,11 @@ package com.example.macthapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -27,13 +30,14 @@ public class Match extends AppCompatActivity {
     ImageView imageView;
     TextView name,age,hobbies,mail;
     EditText nameEdit,ageEdit,emailEdit,hobbiesEdit;
-    ArrayList<String> userIdArray;
+    Button send,restart;
+    Random random=new Random();
+    ArrayList<String> array=new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_match);
-
 
         imageView=findViewById(R.id.imageView4);
         name=findViewById(R.id.nameText);
@@ -44,17 +48,36 @@ public class Match extends AppCompatActivity {
         ageEdit=findViewById(R.id.ageEdit);
         emailEdit=findViewById(R.id.emailEdit);
         hobbiesEdit=findViewById(R.id.hobbiesEdit);
+        send=findViewById(R.id.send);
+        restart=findViewById(R.id.restart);
 
 
         FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
 
-     //   MainMenu mainMenu=new MainMenu();
+       // MainMenu mainMenu=new MainMenu();
       //  String randomUserId=mainMenu.getRandomUserId();
-        String currentid=user.getUid();
+       // String currentid=user.getUid();
+    /*    String[] userIdArrays={"0CqJFgLb9zOlXCSHekLTTj203wD3","0XmL1euEv0N4CiPVsC7LeVz4OEC2","3LWh3xMNHXbIrYLjWnlqSZQrRH73","4K8GHCNJbmQDnY4x6RnHRTAFcUT2","4zbe9tAcmQboBO23NXRCnCQjlcX2",
+                "67yngCU5NjfngETRYfQ6vK7Kefr1","7qKF3qijQpSiyVsdJqKKfZ8i1j52","8oUauvi3oDZFYmZBmb2oh9awaly2","APTQPlmAuRN9xQ9Pwy8IR8AiHct2",
+                "GJbY9hJpPSgvuZNqe8599U9YAmy2"};*/
+
+        array.add("0CqJFgLb9zOlXCSHekLTTj203wD3");
+        array.add("0XmL1euEv0N4CiPVsC7LeVz4OEC2");
+        array.add("3LWh3xMNHXbIrYLjWnlqSZQrRH73");
+        array.add("4K8GHCNJbmQDnY4x6RnHRTAFcUT2");
+        array.add("4zbe9tAcmQboBO23NXRCnCQjlcX2");
+        array.add("67yngCU5NjfngETRYfQ6vK7Kefr1");
+        array.add("7qKF3qijQpSiyVsdJqKKfZ8i1j52");
+        array.add("8oUauvi3oDZFYmZBmb2oh9awaly2");
+        array.add("APTQPlmAuRN9xQ9Pwy8IR8AiHct2");
+        array.add("GJbY9hJpPSgvuZNqe8599U9YAmy2");
+
+        String randomUserId=array.get(random.nextInt(array.size()));
+
 
         DocumentReference reference;
         FirebaseFirestore firestore=FirebaseFirestore.getInstance();
-        reference=firestore.collection("Users").document(currentid);
+        reference=firestore.collection("Users").document(randomUserId);
 
         reference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
@@ -83,5 +106,9 @@ public class Match extends AppCompatActivity {
                 }
             }
         });
+    }
+    public void againMatch(View view){
+        Intent intent=new Intent(Match.this,Match.class);
+        startActivity(intent);
     }
 }
