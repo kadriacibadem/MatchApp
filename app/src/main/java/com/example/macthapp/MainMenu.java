@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -33,6 +34,7 @@ public class MainMenu extends AppCompatActivity {
     EditText nameEdit,ageEdit,emailEdit,hobbiesEdit;
     Button button1,button2;
     ArrayList<String> userIdArray=new ArrayList<String>();
+    private FirebaseAuth firebaseAuth;
 
 
     @Override
@@ -108,5 +110,24 @@ public class MainMenu extends AppCompatActivity {
     public void messages(View view){
         Intent intent=new Intent(MainMenu.this,Messages.class);
         startActivity(intent);
+    }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if(item.getItemId()==R.id.bottom_nav_ic_signOut){
+
+            firebaseAuth.signOut();
+            Intent intent=new Intent(MainMenu.this,LogInActivity.class);
+            startActivity(intent);
+            finish();
+        }
+        else if(item.getItemId()==R.id.bottom_nav_ic_macth){
+
+            Intent intent=new Intent(MainMenu.this,Match.class);
+            startActivity(intent);
+            finish();
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

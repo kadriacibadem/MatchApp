@@ -7,9 +7,9 @@
         android:title="Profile"/>
 
     <item
-        android:id="@+id/bottom_nav_ic_message"
+        android:id="@+id/bottom_nav_ic_signOut"
         android:icon="@drawable/ic_messages"
-        android:title="Messages"/>
+        android:title="Sign out"/>
 
 
     <item
