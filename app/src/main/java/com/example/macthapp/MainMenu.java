@@ -32,7 +32,7 @@ public class MainMenu extends AppCompatActivity {
     ImageView imageView;
     TextView name,age,hobbies,mail;
     EditText nameEdit,ageEdit,emailEdit,hobbiesEdit;
-    Button button1,button2;
+    Button button1,button2,buttonSignOut;
     ArrayList<String> userIdArray=new ArrayList<String>();
     private FirebaseAuth firebaseAuth;
 
@@ -52,6 +52,7 @@ public class MainMenu extends AppCompatActivity {
         hobbiesEdit=findViewById(R.id.hobbiesEdit);
         button1=findViewById(R.id.button1);
         button2=findViewById(R.id.button2);
+        buttonSignOut=findViewById(R.id.buttonSignOut);
 
 
         FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
@@ -111,23 +112,12 @@ public class MainMenu extends AppCompatActivity {
         Intent intent=new Intent(MainMenu.this,Messages.class);
         startActivity(intent);
     }
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
-        if(item.getItemId()==R.id.bottom_nav_ic_signOut){
+    public void signOut(View view){
 
-            firebaseAuth.signOut();
-            Intent intent=new Intent(MainMenu.this,LogInActivity.class);
-            startActivity(intent);
-            finish();
-        }
-        else if(item.getItemId()==R.id.bottom_nav_ic_macth){
-
-            Intent intent=new Intent(MainMenu.this,Match.class);
-            startActivity(intent);
-            finish();
-        }
-
-        return super.onOptionsItemSelected(item);
+        firebaseAuth.signOut();
+        Intent intent=new Intent(MainMenu.this,LogInActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

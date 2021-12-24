@@ -186,13 +186,13 @@
         android:id="@+id/button1"
         android:layout_width="128dp"
         android:layout_height="49dp"
+        android:background="@drawable/rectangle"
         android:onClick="messages"
         android:text="Messages"
         android:textColor="#342E37"
-        android:background="@drawable/rectangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.193"
+        app:layout_constraintHorizontal_bias="0.035"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hobbies"
         app:layout_constraintVertical_bias="0.666" />
@@ -201,15 +201,29 @@
         android:id="@+id/button2"
         android:layout_width="117dp"
         android:layout_height="50dp"
+        android:background="@drawable/rectangle"
         android:onClick="match"
         android:text="Match"
         android:textColor="#342E37"
-        android:background="@drawable/rectangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.826"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hobbies"
-        app:layout_constraintVertical_bias="0.666" />
+        app:layout_constraintVertical_bias="0.66" />
+
+    <Button
+        android:id="@+id/buttonSignOut"
+        android:layout_width="117dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rectangle"
+        android:onClick="signOut"
+        android:text="Sign Out"
+        android:textColor="#342E37"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.945"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hobbies"
+        app:layout_constraintVertical_bias="0.66" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

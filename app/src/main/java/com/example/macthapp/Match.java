@@ -30,7 +30,7 @@ public class Match extends AppCompatActivity {
     ImageView imageView;
     TextView name,age,hobbies,mail;
     EditText nameEdit,ageEdit,emailEdit,hobbiesEdit;
-    Button send,restart;
+    Button send,restart,buttonBack;
     Random random=new Random();
     ArrayList<String> array=new ArrayList<String>();
 
@@ -50,6 +50,7 @@ public class Match extends AppCompatActivity {
         hobbiesEdit=findViewById(R.id.hobbiesEdit);
         send=findViewById(R.id.send);
         restart=findViewById(R.id.restart);
+        buttonBack=findViewById(R.id.buttonBack);
 
 
         FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
@@ -105,5 +106,12 @@ public class Match extends AppCompatActivity {
     public void againMatch(View view){
         Intent intent=new Intent(Match.this,Match.class);
         startActivity(intent);
+    }
+
+    public void backToProfile(View view){
+
+        Intent intent=new Intent(Match.this,MainMenu.class);
+        startActivity(intent);
+        finish();
     }
 }

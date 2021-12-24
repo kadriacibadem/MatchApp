@@ -19,30 +19,43 @@
 
     <Button
         android:id="@+id/send"
-        android:layout_width="167dp"
-        android:layout_height="43dp"
+        android:layout_width="129dp"
+        android:layout_height="59dp"
         android:text=" Send Message"
         android:textColor="#FFEB3B"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.193"
+        app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hobbies"
-        app:layout_constraintVertical_bias="0.666" />
+        app:layout_constraintVertical_bias="0.658" />
 
     <Button
         android:id="@+id/restart"
-        android:layout_width="164dp"
-        android:layout_height="41dp"
+        android:layout_width="117dp"
+        android:layout_height="59dp"
         android:onClick="againMatch"
         android:text="Again Match"
         android:textColor="#FFEB3B"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.942"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hobbies"
-        app:layout_constraintVertical_bias="0.686" />
+        app:layout_constraintVertical_bias="0.659" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="117dp"
+        android:layout_height="59dp"
+        android:onClick="backToProfile"
+        android:text="Back to Profile"
+        android:textColor="#FFEB3B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.897"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hobbies"
+        app:layout_constraintVertical_bias="0.638" />
 
     <EditText
         android:id="@+id/nameText"
