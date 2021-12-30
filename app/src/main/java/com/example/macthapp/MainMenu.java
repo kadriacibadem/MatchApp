@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -32,7 +33,7 @@ public class MainMenu extends AppCompatActivity {
     ImageView imageView;
     TextView name,age,hobbies,mail;
     EditText nameEdit,ageEdit,emailEdit,hobbiesEdit;
-    Button button1,button2,buttonSignOut;
+    ImageButton imageButtonMessage,imageButtonMatch,imageButtonLogOut;
     ArrayList<String> userIdArray=new ArrayList<String>();
     private FirebaseAuth firebaseAuth;
 
@@ -50,9 +51,10 @@ public class MainMenu extends AppCompatActivity {
         ageEdit=findViewById(R.id.ageEdit);
         emailEdit=findViewById(R.id.emailEdit);
         hobbiesEdit=findViewById(R.id.hobbiesEdit);
-        button1=findViewById(R.id.button1);
-        button2=findViewById(R.id.button2);
-        buttonSignOut=findViewById(R.id.buttonSignOut);
+        imageButtonMessage=findViewById(R.id.button1);
+        imageButtonMatch=findViewById(R.id.button2);
+        imageButtonLogOut=findViewById(R.id.buttonSignOut);
+
 
 
         FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
@@ -115,7 +117,7 @@ public class MainMenu extends AppCompatActivity {
 
     public void signOut(View view){
 
-        firebaseAuth.signOut();
+        FirebaseAuth.getInstance().signOut();
         Intent intent=new Intent(MainMenu.this,LogInActivity.class);
         startActivity(intent);
         finish();

@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -30,7 +31,7 @@ public class Match extends AppCompatActivity {
     ImageView imageView;
     TextView name,age,hobbies,mail;
     EditText nameEdit,ageEdit,emailEdit,hobbiesEdit;
-    Button send,restart,buttonBack;
+    ImageButton send,restart,buttonBack;
     Random random=new Random();
     ArrayList<String> array=new ArrayList<String>();
 
@@ -113,5 +114,9 @@ public class Match extends AppCompatActivity {
         Intent intent=new Intent(Match.this,MainMenu.class);
         startActivity(intent);
         finish();
+    }
+    public void backToMessages(View view){
+        Intent intent=new Intent(Match.this,Messages.class);
+        startActivity(intent);
     }
 }
